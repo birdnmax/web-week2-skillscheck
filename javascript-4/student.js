@@ -6,8 +6,11 @@
 
 // CODE HERE
 
+var faveColors = ['green', 'blue', 'orange']
+
 //////////////////Step 2////////////////////
-// Create an object called 'me' that has these keys: firstname, superHeroName, homeTown, superPowers, superPowerXP, profileImage. 
+// Create an object called 'me' that has these keys: firstname, superHeroName, homeTown, superPowers, 
+//superPowerXP, profileImage. 
 
 // The firstName key should be your name as a string. 
 
@@ -15,16 +18,29 @@
 
 // The homeTown key should be your home town. 
 
-// The superPowers key should be an array of your three super powers as a string. e.g. ['skateboarding', 'crime fighting', 'crime inciting']
+// The superPowers key should be an array of your three super powers as a string. e.g. ['skateboarding', 
+//'crime fighting', 'crime inciting']
 
-//  The superPowerXP key will be a method that returns a random number between 1-100. Use Math.floor(Math.random() * 100) + 1 
+//  The superPowerXP key will be a method that returns a random number between 1-100. Use 
+//Math.floor(Math.random() * 100) + 1 
 
 // The profileImage key will return this url `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`.
 
 // CODE HERE
 
+var me = {
+    firstName: "Brittany",
+    superHeroName: "flightless bird",
+    homeTown: "the 801",
+    superPowers: ['bore to death', 'procrastinate', 'eat lots of cheese'],
+    superPowerXP: function (){return Math.floor(Math.random() * 100) + 1},
+    profileImage: function (){return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`}
+}
+
 //////////////////Step 3////////////////////
-// Create three variables to hold some data off your me object. The first variable should be 'regularName' that is the value of your firstName on the me object. The next variable is 'superName' which is the value of superHeroName on the me object. Last is 'homeTown' which will be the value of homeTown on the me object
+// Create three variables to hold some data off your me object. The first variable should be 'regularName' 
+//that is the value of your firstName on the me object. The next variable is 'superName' which is the value 
+//of superHeroName on the me object. Last is 'homeTown' which will be the value of homeTown on the me object
 
 // CODE HERE
 
