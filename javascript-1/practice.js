@@ -88,8 +88,7 @@ console.log(colorCopy)
 
 //Code Here
 
-var colorCopy = colorCopy.push("blue");
-console.log(colorCopy)
+var add = colorCopy.push("blue");
 
 //////////////////PROBLEM 10////////////////////
 
@@ -148,7 +147,7 @@ var bigOrSmall = (arr) => {
 
 var arrayReverser = (arr) => {
 	var reversed = [];
-	for (i = arr.length; i >= 0; i--){
+	for (i = arr.length - 1; i >= 0; i--){
 		reversed.push(arr[i]);
 	}
 	return reversed;
@@ -196,9 +195,11 @@ var total = myNumbers.reduce(function(reducer, theElement){
 
 var myNumbersIndex = [];
 
-myNumbers.forEach(function(myNumbersIndex, i){
-	myNumbersIndex = myNumbers[i]
-}, 0);
+myNumbers.forEach(function(i){
+	myNumbersIndex.push(myNumbers.indexOf(i))
+});
+
+console.log(myNumbersIndex);
 
 //////////////////PROBLEM 18////////////////////
 
@@ -208,9 +209,13 @@ const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 // Code Here
 
-var forTheLoveOfGeorge = notGeorge.map(function(){
-	 notGeorge.push("George")
+var forTheLoveOfGeorge = [];
+
+notGeorge.forEach(function(i){
+	forTheLoveOfGeorge.push(i = "George")
 })
+
+console.log(forTheLoveOfGeorge)
 
 //////////////////PROBLEM 19////////////////////
 
@@ -227,9 +232,23 @@ const people = [
 
 // Code Here
 
+var enemies = [];
+
+people.filter(function(people){
+	if (people.friend === false){
+		enemies.push(people)
+	}
+})
+
+console.log(enemies)
+
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 
 //''totallyAwesome'. Use .reduce()
 
-// Code Here
+const totallyAwesome = people.reduce(function(a, c){
+	return a + c.awesomeLevel
+}, 0)
+
+console.log(totallyAwesome)
